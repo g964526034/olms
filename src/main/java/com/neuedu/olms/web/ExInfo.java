@@ -17,4 +17,10 @@ public class ExInfo {
 
 	public static int USER_NO_LOGIN_CODE = 1002;
 	public static String USER_NO_LOGIN_MSG = "用户未登录";
+
+	public static int IMG_WRAPPER_ERROR_CODE = 1003;
+	public static String IMG_WRAPPER_ERROR_MSG = "图片封面不能为空";
+
+	public static int IMG_UPLOAD_ERROR_CODE = 1004;
+	public static String IMG_UPLOAD_ERROR_MSG = "图片上传失败";
 }

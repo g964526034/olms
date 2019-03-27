@@ -22,9 +22,9 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
-	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"></bean>
+	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
 		
-		<bean id="multipartResolver"
+	<bean id="multipartResolver"
 	        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 	
 	    <!-- one of the properties available; the maximum file size in bytes -->
@@ -37,6 +37,7 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>
+			<mvc:exclude-mapping path="/upload/**"/>
 			<bean class="com.neuedu.olms.web.PrivilegeInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
